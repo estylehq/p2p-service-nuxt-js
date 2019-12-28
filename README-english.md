@@ -1,6 +1,6 @@
 # P2P Service demo.
 
-This is web client project; P2P Service in Company.
+This is Web client ; P2P Service.
 
 * Removed or modified sensitive codes or contents.
 * Add dummy datas, so just download and run!
