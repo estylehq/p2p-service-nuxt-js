@@ -1,0 +1,15 @@
+export default {
+  name: '이름',
+  'name-charger': '담당자 명',
+  contact: '연락처',
+  type: '회원 구분',
+  'company-name': '상호명',
+  'company-code': '사업자 번호',
+  'contact-request': '요청하기',
+  'contact-verify': '인증하기',
+  'enter-number-only': '숫자만 입력해 주세요.',
+  'contact-verify-code': '인증번호',
+  'contact-verify-message': '수신된 문자의 인증번호를 입력하세요.',
+  'field-is-too-short': '입력된 내용이 너무 짧습니다.',
+  'button-save': '저장하기',
+};

@@ -1,0 +1,23 @@
+export default {
+  accrued: '누적 투자금',
+  balance: '예치금',
+  status: '투자 현황',
+  'accrued-interests': '누적 투자 이익',
+  'accrued-interests-rates': '누적 수익률',
+  'after-tax': '세후',
+  'button-asking': '질문하기',
+  'button-certificate': '인증하기',
+  'button-user-info': '계정정보',
+  'button-withdraw': '출금하기',
+  'estimated-amount': '상환 예정 투자금',
+  'getting-data': '데이터를 가져오는 중',
+  'pre-tax': '세전',
+  'status-complete': '상환 완료',
+  'status-delay': '연체',
+  'status-ready': '펀딩 중',
+  'status-repay': '상환 중',
+  'status-total': '총 {total} 개',
+  'you-did-not-certificated': '투자자 인증이 되지 않았습니다.',
+  'you-can-invest-after-certificate':
+    '투자를 하기 위해 투자자 인증을 진행해 주세요.',
+};

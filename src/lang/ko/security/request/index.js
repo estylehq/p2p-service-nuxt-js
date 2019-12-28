@@ -1,0 +1,15 @@
+export default {
+  header: '대출 상담 신청',
+  description: '아래의 항목에 맞게 입력하세요.',
+  'company-name': '회사명',
+  'company-code': '사업자 등록번호',
+  'loan-amount': '희망 대출액',
+  'loan-term': '희망 대출기간',
+  'loan-other': '기타사항',
+  'currency-text': '만원',
+  'months-text': '개월',
+  'button-send-request': '신청하기',
+  'invalid-company-code': '사업자 등록번호가 올바르지 않습니다.',
+  'enter-amount-correctly': '금액을 정확히 입력해 주십시오.',
+  'enter-months-correctly': '1 ~ 12개월 사이로 입력해 주십시오.',
+};
