@@ -6,12 +6,6 @@ import {
 export default {
   locales: [
     {
-      code: 'en',
-      iso: 'en-US',
-      name: 'Global',
-      file: 'en/index.js',
-    },
-    {
       code: 'ko',
       iso: 'ko-KR',
       name: '한국어',
