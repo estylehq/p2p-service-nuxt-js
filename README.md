@@ -40,20 +40,15 @@ P2P 서비스의 웹 클라이언트 프로젝트 입니다.
 
 * QnA에서 작성한 글이 로컬의 store에 저장되지 않습니다.
 
+## Sample Site
+[샘플 사이트](http://clarkhansample.back4app.io/p2p)
+
 ## 인스톨
 
 ```
 npm install
 ```
 
-## 빠른 확인
-
-* python의 SimpleHTTPServer를 이용해 보세요(macOS).
-
-```
-cd public
-python -m SimpleHTTPServer
-```
 
 ### 개발을 위한 컴파일 및 핫로드
 
