@@ -80,7 +80,7 @@ export default {
   //   '/api': '[P2P SERVICE API SERVER]',
   // },
   router: {
-    base: '/app/',
+    base: '/p2p/',
     middleware: ['bank-list/index'],
     scrollBehavior: function onScrollBehavior(to, from, savedPosition) {
       return { x: 0, y: 0 };
