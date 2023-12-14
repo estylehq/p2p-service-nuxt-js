@@ -22,5 +22,6 @@ module.exports = {
     "no-console": "off",
     "no-unused-vars": "off",
     "implicit-arrow-linebreak": "off",
+    "vue/comment-directive": 0,
   }
 }
