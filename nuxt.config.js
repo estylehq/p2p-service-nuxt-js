@@ -2,7 +2,7 @@ import pkg from './package';
 import langConfig from './src/lang/config';
 
 export default {
-  mode: 'universal',
+  ssr: false,
   srcDir: 'src/',
   /*
    ** Headers of the page
@@ -80,7 +80,6 @@ export default {
   //   '/api': '[P2P SERVICE API SERVER]',
   // },
   router: {
-    base: '/p2p/',
     middleware: ['bank-list/index'],
     scrollBehavior: function onScrollBehavior(to, from, savedPosition) {
       return { x: 0, y: 0 };
@@ -91,16 +90,6 @@ export default {
    */
   build: {
     watch: ['api'],
-    filenames: {
-      manifest: 'manifest/[name].js',
-      vendor: 'vendor/[name].js',
-      app: 'app/[name].js',
-      chunk: 'chunk/[name].js',
-      css: 'css/[name].css',
-      img: 'img/[name].[ext]',
-      md: 'md/[name].[ext]',
-      html: 'html/[name].[ext]',
-    },
     extractCSS: true,
     // transpile: [''],
     // plugins: [],
