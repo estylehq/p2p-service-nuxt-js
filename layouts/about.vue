@@ -60,24 +60,26 @@ export default {
 };
 </script>
 
-<style scoped>
-ul.nav {
-  padding: 0;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+<style lang="scss" scoped>
+ul {
+  nav {
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
 
-ul.nav > li {
-  padding: 0 8px;
-  font-size: 0.9rem;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
+    li {
+      padding: 0 8px;
+      font-size: 0.9rem;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
 
-ul.nav > li:last-child {
-  border-right: unset;
-}
+      &:last-child {
+        border-right: unset;
+      }
 
-li.active {
-  font-weight: bold;
+      .active {
+        font-weight: bold;
+      }
+    }
+  }
 }
 </style>
