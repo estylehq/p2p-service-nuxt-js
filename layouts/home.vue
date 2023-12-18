@@ -20,7 +20,6 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import dialogMixin from '~/mixin/dialog';
 import AppHeaderLoanModal from '~/components/app/header/loan/AppHeaderLoanModal.vue';
 import AppHeaderLoan from '~/components/app/header/loan/AppHeaderLoan.vue';
 import AppHeaderNaviBar from '~/components/app/header/AppHeaderNaviBar.vue';
@@ -46,14 +45,16 @@ export default {
     },
   },
   mounted() {
-    if (process.isClient) {
-      window.addEventListener('scroll', this.handleScroll);
+    if (!process.client) {
+      return;
     }
+    window.addEventListener('scroll', this.handleScroll);
   },
   beforeDestroy() {
-    if (process.isClient) {
-      window.removeEventListener('scroll', this.handleScroll);
+    if (!process.client) {
+      return;
     }
+    window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
     ...mapActions('sign-out', ['signOut']),
