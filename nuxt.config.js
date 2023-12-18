@@ -1,20 +1,22 @@
-import pkg from './package';
-import langConfig from './src/lang/config';
+import langConfig from './lang/config';
 
 export default {
+  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
-  srcDir: 'src/',
-  /*
-   ** Headers of the page
-   */
+
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    title: 'p2p-service-nuxt-js',
+    htmlAttrs: {
+      lang: 'ko',
+    },
     meta: [
       { charset: 'utf-8' },
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
       },
-      { hid: 'description', name: 'description', content: pkg.description },
+      { hid: 'description', name: 'description', content: 'description' },
       { property: 'og:type', content: 'website' },
     ],
     link: [
@@ -37,44 +39,50 @@ export default {
       },
     ],
   },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
+  loading: { color: '#f0f0f0' },
+
+  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/css/bootstrap.css',
-    '~/css/main.css',
+    '~/assets/css/bootstrap.css',
+    '~/assets/css/main.css',
     'vue-js-modal/dist/styles.css',
   ],
-  /*
-   ** Plugins to load before mounting the App
-   */
+
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~plugins/vue-js-modal',
     '~plugins/vue-css-donut-chart',
     '~plugins/after-each',
   ],
-  /*
-   ** Nuxt.js modules
-   */
+
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: false,
+
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  buildModules: [
+    // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/eslint-module',
+  ],
+
+  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
+    // https://go.nuxtjs.dev/bootstrap
+    'bootstrap-vue/nuxt',
+    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
-    ['nuxt-i18n', langConfig],
-    'bootstrap-vue/nuxt',
-    'cookie-universal-nuxt',
+    '@nuxtjs/i18n',
     'vue-daum-postcode/nuxt',
+    'cookie-universal-nuxt',
   ],
-  /*
-   ** Axios module configuration
-   */
+  i18n: {
+    ...langConfig,
+  },
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
   // axios: {
-  //   // See https://github.com/nuxt-community/axios-module#options
-  //   proxy: true,
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    // baseURL: '/',
   // },
   // proxy: {
   //   '/api': '[P2P SERVICE API SERVER]',
@@ -85,32 +93,21 @@ export default {
       return { x: 0, y: 0 };
     },
   },
-  /*
-   ** Build configuration
-   */
+  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    watch: ['api'],
     extractCSS: true,
-    // transpile: [''],
-    // plugins: [],
-    // loaders: {
-    //   stylus: {
-    //     import: [''],
-    //   },
-    // },
-    /*
-     ** You can extend webpack config here
+     /** You can extend webpack config here
      */
     extend(config, ctx) {
       // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-        });
-      }
+      // if (ctx.isDev && ctx.isClient) {
+      //   config.module.rules.push({
+      //     enforce: 'pre',
+      //     test: /\.(js|vue)$/,
+      //     loader: 'eslint-loader',
+      //     exclude: /(node_modules)/,
+      //   });
+      // }
     },
   },
-};
+}

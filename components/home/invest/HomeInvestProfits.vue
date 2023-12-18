@@ -2,27 +2,35 @@
   <div class="bg">
     <div class="container">
       <b-row>
-        <b-col cols="12" lg="6">
-          <img src="@/css/home/intro/icon-loan-01.svg" />
+        <b-col cols="12" lg="4">
+          <img src="~/assets/css/home/intro/icon-invest-01.svg" />
           <p class="header">장점 1</p>
           <div class="divider"></div>
           <p class="desc">
             서비스의 장점 1.
           </p>
         </b-col>
-        <b-col cols="12" lg="6">
-          <img src="@/css/home/intro/icon-loan-02.svg" />
+        <b-col cols="12" lg="4">
+          <img src="~/assets/css/home/intro/icon-invest-02.svg" />
           <p class="header">장점 2</p>
           <div class="divider"></div>
           <p class="desc">
             서비스의 장점 2.
           </p>
         </b-col>
+        <b-col cols="12" lg="4">
+          <img src="~/assets/css/home/intro/icon-invest-03.svg" />
+          <p class="header">장점 3</p>
+          <div class="divider"></div>
+          <p class="desc">
+            서비스의 장점 3.
+          </p>
+        </b-col>
       </b-row>
       <div class="buttons">
         <div class="spacer"></div>
-        <button @click="$router.push({ name: 'security' })" class="btn btn-lg">
-          대출하기
+        <button @click="$router.push(localePath('invest'))" class="btn btn-lg">
+          투자하기
         </button>
         <div class="spacer"></div>
       </div>
@@ -32,7 +40,7 @@
 
 <style scoped>
 div.bg {
-  background-color: #fcfaf5;
+  background-color: #f4f8f9;
 }
 
 div.container {
@@ -71,19 +79,19 @@ p.desc {
 }
 
 p.question {
-  color: #e09b22;
+  color: #62859b;
   font-size: 0.8rem;
   font-weight: bold;
 }
 
 div.divider {
-  width: 60%;
+  width: 75%;
   margin: 16px auto;
-  border-bottom: 2px solid #ffd05a;
+  border-bottom: 2px solid #1f93ff;
 }
 
 div.buttons button {
-  background-color: #ffbf31;
+  background-color: #1f93ff;
   color: #ffffff;
   min-width: 180px;
 }
