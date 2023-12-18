@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <p class="header"><span>2</span>{{ $t('sign-up.fill-the-reg-form') }}</p>
-    <b-form @submit.prevent="onSubmit" name="sign-up-form">
+  <sign-up-based-form :number="2" :text="$t('sign-up.fill-the-reg-form')">
+    <b-form name="sign-up-form" @submit.prevent="onSubmit">
       <b-form-group :label="$t('sign-up.email')" label-for="email">
         <b-form-input
           id="email"
@@ -134,7 +133,7 @@
       </b-form-group>
       <slot name="policies"></slot>
       <div class="buttons">
-        <b-btn @click="$emit('backward')" variant="outline-secondary">
+        <b-btn variant="outline-secondary" @click="$emit('backward')">
           {{ $t('sign-up.button-backward') }}
         </b-btn>
         <b-btn variant="primary" type="submit">
@@ -142,16 +141,19 @@
         </b-btn>
       </div>
     </b-form>
-  </div>
+  </sign-up-based-form>
 </template>
 
 <script>
 import Password from 'vue-password-strength-meter';
+
+import SignUpBasedForm from './SignUpBasedForm.vue';
 import fieldValidateMixin from '~/mixin/textfield/validate';
 
 export default {
   components: {
     Password,
+    SignUpBasedForm,
   },
   mixins: [fieldValidateMixin],
   props: {

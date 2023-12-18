@@ -1,17 +1,16 @@
 <template>
-  <div>
-    <p class="header"><span>1</span>{{ $t('sign-up.check-email') }}</p>
-    <b-form @submit.prevent="$emit('submit', email)" name="email-form">
+  <sign-up-based-form :number="1" :text="$t('sign-up.check-email')">
+    <b-form name="email-form" @submit.prevent="$emit('submit', email)">
       <b-form-group :label="$t('sign-up.email')" label-for="email">
         <b-form-input
           id="email"
           v-model="email"
           :state="message === null ? isValid : false"
-          @input="$emit('input')"
           required
           type="email"
           autocomplete="off"
           aria-describedby="invalid-email"
+          @input="$emit('input')"
         ></b-form-input>
         <b-form-feedback id="invalid-email">
           {{
@@ -25,19 +24,21 @@
       </b-form-group>
       <b-button
         :disabled="!isValid"
-        @click="$emit('email', email)"
         variant="primary"
+        @click="$emit('email', email)"
       >
         {{ $t('sign-up.check-email') }}
       </b-button>
     </b-form>
-  </div>
+  </sign-up-based-form>
 </template>
 
 <script>
+import SignUpBasedForm from './SignUpBasedForm.vue';
 import fieldValidateMixin from '~/mixin/textfield/validate';
 
 export default {
+  components: { SignUpBasedForm },
   mixins: [fieldValidateMixin],
   props: {
     message: { type: String, default: null },
@@ -67,4 +68,4 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped></style>
