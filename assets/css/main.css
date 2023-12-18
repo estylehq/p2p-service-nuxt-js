@@ -267,8 +267,6 @@ button.simple:active {
 
 footer {
   width: 100%;
-  position: fixed;
-  bottom: 0;
   z-index: 2;
 }
 
@@ -278,13 +276,6 @@ div.buttons {
 
 div.spacer {
   flex-grow: 1 !important;
-}
-
-div.footer-spacer {
-  margin: 0;
-  width: 100%;
-  padding: 0;
-  height: 256px;
 }
 
 .margin-0 {
