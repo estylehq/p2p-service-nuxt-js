@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="floating-header">
     <div class="header">
       <b-btn
         v-if="backButton"
-        @click="$router.go(-1)"
         variant="outline-secondary"
         class="back"
+        @click="$router.go(-1)"
       >
         <i class="fa fa-arrow-left"></i>
       </b-btn>
@@ -39,71 +39,77 @@ export default {
 };
 </script>
 
-<style scoped>
-div.header {
-  display: flex;
-}
+<style lang="scss" scoped>
+div.floating-header {
+  div.header {
+    display: flex;
 
-.btn,
-.btn:hover,
-.btn:focus,
-.btn:active,
-div.buttons >>> .btn,
-div.buttons >>> .btn:hover,
-div.buttons >>> .btn:focus,
-div.buttons >>> .btn:active {
-  border-radius: 0;
-}
+    .title {
+      padding: 16px;
+      margin-bottom: 0;
+      font-weight: bold;
+    }
 
-.btn {
-  border: unset;
-}
+    .btn {
+      border: unset;
+      border-radius: 0;
 
-.btn > i.fa,
-div.buttons >>> .btn > i.fa {
-  margin-right: 0;
-  font-size: 1.5rem;
-  padding: 8px;
-}
+      &:hover,
+      &:focus,
+      &:active {
+        border-radius: 0;
+      }
 
-.btn.back {
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
+      i.fa {
+        margin-right: 0;
+        font-size: 1.5rem;
+        padding: 8px;
+      }
 
-.btn.back,
-.btn.back:hover,
-.btn.back:active,
-.btn.back:focus,
-.btn.back:focus-visible,
-.btn.back:focus-within {
-  border-top-left-radius: 8px;
-}
+      &.back {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        border-top-left-radius: 8px;
 
-.buttons > .btn:last-child,
-.buttons > .btn:last-child:hover,
-.buttons > .btn:last-child:active,
-.buttons > .btn:last-child:focus,
-.buttons > .btn:last-child:focus-visible,
-.buttons > .btn:last-child:focus-within {
-  border-top-right-radius: 8px;
-}
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-visible,
+        &:focus-within {
+          border-top-left-radius: 8px;
+        }
+      }
+    }
 
-div.header > .title {
-  padding: 16px;
-  margin-bottom: 0;
-  font-weight: bold;
+    .buttons {
+      & > .btn {
+        &:last-child,
+        &:last-child:hover,
+        &:last-child:active,
+        &:last-child:focus,
+        &:last-child:focus-visible,
+        &:last-child:focus-within {
+          border-top-right-radius: 8px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 568px) {
-  .btn > i.fa,
-  div.buttons >>> .btn > i.fa {
-    font-size: 1rem;
-    padding: 8px 4px;
-  }
+  div.floating-header {
+    div.header {
+      .btn {
+        & > i.fa {
+          font-size: 1rem;
+          padding: 8px 4px;
+        }
+      }
 
-  div.header > .title {
-    font-size: 1rem;
-    padding: 12px 8px 0;
+      .title {
+        font-size: 1rem;
+        padding: 12px 8px 0;
+      }
+    }
   }
 }
 </style>

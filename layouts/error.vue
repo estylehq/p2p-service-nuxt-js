@@ -10,7 +10,7 @@
       {{ error.message || $t('error.unknown-error') }}
     </h6>
     <div class="buttons">
-      <b-button @click="$router.go(-1)" variant="primary">
+      <b-button variant="primary" @click="$router.go(-1)">
         <i class="fa fa-arrow-left"></i>
         {{ $t('error.button-foward') }}
       </b-button>
@@ -41,35 +41,43 @@ export default {
 };
 </script>
 
-<style scoped>
-div.error-container {
-  padding: 24px;
-  text-align: center;
-}
+<style lang="scss" scoped>
+div {
+  &.error-container {
+    padding: 24px;
+    text-align: center;
 
-h1.status-code {
-  opacity: 0.15;
-  width: 100%;
-  font-size: 5rem;
-  line-height: 0.2;
-  font-weight: bold;
-  margin: 32px auto 0;
-}
+    h1 {
+      &.status-code {
+        opacity: 0.15;
+        width: 100%;
+        font-size: 5rem;
+        line-height: 0.2;
+        font-weight: bold;
+        margin: 32px auto 0;
+      }
+    }
 
-h2.message {
-  margin-bottom: 32px;
-}
+    h2 {
+      &.message {
+        margin-bottom: 32px;
+      }
+    }
 
-h6 {
-  margin-bottom: 32px;
-}
+    h6 {
+      margin-bottom: 32px;
+    }
 
-div.buttons > .btn {
-  flex-grow: 1;
-  margin-right: 8px;
-}
+    div.buttons {
+      .btn {
+        flex-grow: 1;
+        margin-right: 8px;
 
-div.buttons > .btn:last-child {
-  margin-right: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
 </style>

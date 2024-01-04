@@ -38,68 +38,81 @@
   </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 footer {
   background-color: #f2f2f2;
-}
 
-div.container {
-  margin: 0 auto;
-  max-width: 960px;
-}
+  div.logo {
+    display: flex;
+    padding: 16px 24px;
 
-div.row {
-  padding: 8px 0;
-}
+    & > p {
+      width: fit-content;
+      color: #1f93ff;
+      margin-left: 16px;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+  }
 
-div.row > div {
-  padding: 0;
-}
+  div.row {
+    padding: 8px 0;
 
-div.logo {
-  display: flex;
-  padding: 16px 24px;
-}
+    & > div {
+      padding: 0;
+    }
 
-div.logo > p {
-  width: fit-content;
-  color: #1f93ff;
-  margin-left: 16px;
-  font-weight: bold;
-  font-size: 1.6rem;
-}
+    &.container {
+      margin: 0 auto;
+      max-width: 960px;
+    }
+  }
 
-div.services {
-  padding: 16px;
-}
+  div.services {
+    padding: 16px;
 
-div.services > h6 {
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
+    & > h6 {
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
 
-div.services > ul {
-  font-size: 0.8rem;
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
+    & > ul {
+      font-size: 0.8rem;
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 0;
 
-div.services ul > li {
-  margin-bottom: 8px;
-}
+      li {
+        margin-bottom: 8px;
 
-div.services ul > li:last-child {
-  margin-bottom: 0;
-}
+        a {
+          color: inherit;
+        }
 
-div.services ul a {
-  color: inherit;
-}
+        i.fa {
+          margin-right: 8px;
+        }
 
-div.services li i.fa {
-  margin-right: 8px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  div.divider {
+    margin: 0;
+  }
+
+  p.copyright {
+    font-size: 0.9rem;
+    padding: 16px;
+    margin: 0;
+    line-height: 1.6;
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -108,22 +121,11 @@ div.services li i.fa {
   }
 }
 
-p.copyright {
-  font-size: 0.9rem;
-  padding: 16px;
-  margin: 0;
-  line-height: 1.6;
-  font-weight: bold;
-  text-align: center;
-}
-
-div.divider {
-  margin: 0;
-}
-
 @media (max-width: 768px) {
-  div.row {
-    padding: 16px;
+  footer {
+    div.row {
+      padding: 16px;
+    }
   }
 }
 </style>
