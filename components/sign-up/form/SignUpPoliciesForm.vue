@@ -100,10 +100,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div.divider {
   margin-bottom: 8px;
 }
+
 div.row {
   margin: 0 0 16px;
 }

@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 div.no-item {
   border-radius: 8px;
   padding: 72px 16px;

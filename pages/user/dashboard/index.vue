@@ -159,7 +159,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div.container {
   padding: 16px;
   min-height: 256px;
