@@ -44,7 +44,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div.row {
   margin: 16px auto;
   text-align: center;

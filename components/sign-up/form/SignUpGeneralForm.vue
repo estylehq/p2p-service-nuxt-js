@@ -207,32 +207,36 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div.divider {
   margin: 16px 0;
 }
 
-div.buttons > .btn {
-  flex-grow: 1 !important;
-  margin: 0 8px;
+div.buttons {
+  & > .btn {
+    flex-grow: 1 !important;
+    margin: 0 8px;
+  }
 }
 
 .Password {
   max-width: unset;
+
+  ::v-deep .Password__badge {
+    padding: 2 4px;
+    font-size: 0.8rem;
+    text-align: center;
+    width: fit-content;
+
+    &::before {
+      content: 'score: ';
+    }
+  }
 }
 
-.Password >>> .Password__badge::before {
-  content: 'score: ';
-}
-
-.Password >>> .Password__badge {
-  padding: 2 4px;
-  font-size: 0.8rem;
-  text-align: center;
-  width: fit-content;
-}
-
-small.form-text > ul {
-  padding-left: 24px;
+small.form-text {
+  & > ul {
+    padding-left: 24px;
+  }
 }
 </style>

@@ -66,8 +66,10 @@ export default {
 };
 </script>
 
-<style scoped>
-h6 {
-  font-weight: inherit;
+<style lang="scss" scoped>
+div.policies-list {
+  h6 {
+    font-weight: inherit;
+  }
 }
 </style>

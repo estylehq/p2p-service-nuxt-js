@@ -95,23 +95,19 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div.card {
   margin: 16px auto;
   padding: 0;
   border: unset;
   box-shadow: unset;
-}
 
-div.card,
-div.card:hover,
-div.card:active {
-  box-shadow: unset;
-  opacity: unset;
-}
-
-div.frame {
-  margin-bottom: 12px;
+  &,
+  &:hover,
+  &:active {
+    box-shadow: unset;
+    opacity: unset;
+  }
 }
 
 a {

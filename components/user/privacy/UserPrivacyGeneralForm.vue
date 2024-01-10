@@ -54,25 +54,14 @@ export default {
 };
 </script>
 
-<style scoped>
-h6 {
-  font-weight: bold;
-}
+<style lang="scss" scoped>
+form {
+  div.check-horizontal {
+    margin-top: 8px;
+  }
 
-div.investor-none {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-div.check-horizontal {
-  margin-top: 8px;
-}
-
-.custom-checkbox {
-  margin-bottom: 8px;
-}
-
-div.divider {
-  margin: 8px 0;
+  div.divider {
+    margin: 8px 0;
+  }
 }
 </style>

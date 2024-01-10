@@ -24,15 +24,15 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 a.btn {
   margin: 16px;
   padding: 64px 48px;
   font-size: 1.8rem;
   min-width: 200px;
-}
 
-a.btn > i {
-  margin-right: 16px;
+  & > i {
+    margin-right: 16px;
+  }
 }
 </style>

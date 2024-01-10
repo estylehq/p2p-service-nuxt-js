@@ -44,26 +44,28 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div.row {
   margin: 0 0 16px;
-}
 
-div.row > div:first-child {
-  padding: 0;
-}
+  & > div {
+    &:first-child {
+      padding: 0;
+    }
 
-div.row > div:last-child {
-  text-align: right;
-}
+    &:last-child {
+      text-align: right;
+    }
 
-button {
-  font-size: 0.8rem;
-  padding: 8px 16px;
-}
+    button {
+      font-size: 0.8rem;
+      padding: 8px 16px;
 
-button:hover {
-  color: inherit;
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {

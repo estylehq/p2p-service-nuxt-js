@@ -58,11 +58,13 @@ export default {
 };
 </script>
 
-<style scoped>
-p {
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 16px;
-  margin-top: 8px;
+<style lang="scss" scoped>
+div.user-check-password {
+  p {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 16px;
+    margin-top: 8px;
+  }
 }
 </style>

@@ -36,58 +36,40 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div.modal-content {
   padding: 16px;
   display: block;
-}
 
-button.close {
-  float: right;
-}
+  h3.title {
+    text-align: center;
+  }
 
-button.close > i.fa {
-  margin-right: 0;
-}
+  div.content {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    overflow-y: auto;
+    max-height: 420px;
+    padding: 16px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+  }
 
-h3.title {
-  text-align: center;
-}
-
-div.content {
-  font-size: 0.9rem;
-  line-height: 1.8;
-  overflow-y: auto;
-  max-height: 420px;
-  padding: 16px;
-  background-color: #fafafa;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 8px;
-}
-
-button {
-  width: 100%;
-}
-
-div.policy::-webkit-scrollbar {
-  width: 8px;
-  background-color: transparent;
-}
-
-div.policy::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-div.policy::-webkit-scrollbar-thumb {
-  background-color: #dddddd;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-  h3.title {
-    font-size: 1.4rem;
+  div.modal-content {
+    padding: 16px;
+    display: block;
+
+    h3.title {
+      font-size: 1.4rem;
+    }
   }
 }
 </style>

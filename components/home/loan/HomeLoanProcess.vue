@@ -25,40 +25,40 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 div.container {
   padding: 8px 8px 16px;
   min-height: 386px;
-}
 
-h3.header {
-  color: #ffbf31;
-  margin-bottom: 32px;
-}
+  h3.header {
+    color: #ffbf31;
+    margin-bottom: 32px;
+  }
 
-p {
-  color: #606060;
-  font-size: 0.9rem;
-  text-align: center;
-}
+  p {
+    color: #606060;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 
-div.row {
-  margin-top: 72px;
-  margin-bottom: 56px;
-  text-align: center;
-}
+  div.row {
+    margin-top: 72px;
+    margin-bottom: 56px;
+    text-align: center;
 
-h5 {
-  padding: 16px;
-}
+    h5 {
+      padding: 16px;
+    }
 
-div.arrow {
-  width: 32px;
-  height: 100%;
-  background-image: url('~~/assets/css/home/intro/icon-loan-arrow.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+    div.arrow {
+      width: 32px;
+      height: 100%;
+      background-image: url('~~/assets/css/home/intro/icon-loan-arrow.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
 }
 
 @media (max-width: 991px) {

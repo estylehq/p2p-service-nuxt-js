@@ -36,13 +36,10 @@ export default {
 };
 </script>
 
-<style scoped>
-h5 {
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-
-button {
-  float: right;
+<style lang="scss" scoped>
+form {
+  button {
+    float: right;
+  }
 }
 </style>

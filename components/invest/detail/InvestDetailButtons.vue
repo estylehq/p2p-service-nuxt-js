@@ -35,19 +35,19 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div.buttons {
   text-align: center;
   margin: 16px auto 32px;
-}
 
-div.buttons button {
-  margin-right: 8px;
-  min-width: 180px;
-  padding: auto 24px;
-}
+  button {
+    margin-right: 8px;
+    min-width: 180px;
+    padding: auto 24px;
 
-div.buttons button:last-child {
-  margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 </style>

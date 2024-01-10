@@ -22,28 +22,27 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 nav {
   z-index: 20;
-}
-
-.loan-notice {
   background-color: #e9eaec;
-}
 
-button.btn,
-.loan-text {
-  font-size: 0.85rem;
-  color: #454f5d;
-  opacity: 0.7;
-}
+  button.btn,
+  .loan-text {
+    font-size: 0.85rem;
+    color: #454f5d;
+    opacity: 0.7;
+  }
 
-button.btn:hover,
-button.btn:active {
-  color: #ffffff;
-}
+  .loan-text {
+    letter-spacing: 0.3px;
+  }
 
-.loan-text {
-  letter-spacing: 0.3px;
+  button.btn {
+    &:hover,
+    &:active {
+      color: #ffffff;
+    }
+  }
 }
 </style>

@@ -40,33 +40,39 @@ export default {
 };
 </script>
 
-<style scoped>
-div.row > div {
-  text-align: center;
-}
+<style lang="scss" scoped>
+div.row {
+  & > div {
+    text-align: center;
 
-div.row > div:first-child {
-  padding: 16px 32px 8px;
-}
+    &:first-child {
+      padding: 16px 32px 8px;
+    }
 
-div.row > div:last-child {
-  padding: 8px 32px 16px;
-}
+    &:last-child {
+      padding: 8px 32px 16px;
+    }
 
-a.btn {
-  width: 100%;
-  padding: 16px;
-  font-size: 1.4rem;
-}
+    a.btn {
+      width: 100%;
+      padding: 16px;
+      font-size: 1.4rem;
 
-a.btn > i {
-  margin-right: 16px;
+      i {
+        margin-right: 16px;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
-  a.btn {
-    margin: 16px 0;
-    min-width: 300px;
+  div.row {
+    & > div {
+      a.btn {
+        margin: 16px 0;
+        min-width: 300px;
+      }
+    }
   }
 }
 </style>

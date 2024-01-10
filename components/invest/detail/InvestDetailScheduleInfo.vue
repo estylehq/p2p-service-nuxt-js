@@ -35,53 +35,55 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 div.info {
   padding: 16px;
   font-size: 0.85rem;
-}
 
-div.info p {
-  font-weight: bold;
-  margin-bottom: 16px;
-  padding-left: 16px;
-}
+  ul {
+    padding-left: 24px;
+    margin-top: 16px;
+    margin-bottom: 0;
 
-div.info p > span {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  font-weight: normal;
-}
+    & > li {
+      line-height: 1.8;
+      margin-bottom: 8px;
 
-div.info p > span::before {
-  content: '-';
-  margin-right: 8px;
-}
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 
-div.info ul {
-  padding-left: 24px;
-  margin-top: 16px;
-  margin-bottom: 0;
-}
+  p {
+    font-weight: bold;
+    margin-bottom: 16px;
+    padding-left: 16px;
 
-div.info ul > li {
-  line-height: 1.8;
-  margin-bottom: 8px;
-}
+    & > span {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      font-weight: normal;
 
-div.info ul > li:last-child {
-  margin-bottom: 0;
+      &::before {
+        content: '-';
+        margin-right: 8px;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
-  div.info p {
-    padding-left: 0;
-  }
+  div.info {
+    p {
+      padding-left: 0;
 
-  div.info p > span {
-    margin-top: 4px;
-    font-size: 0.7rem;
+      & > span {
+        margin-top: 4px;
+        font-size: 0.7rem;
+      }
+    }
   }
 }
 </style>

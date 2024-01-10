@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div.header {
   text-align: center;
   padding: 8px 0;
@@ -28,10 +28,10 @@ div.header {
   font-weight: bold;
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.06);
-}
 
-div.header > div {
-  padding: 0;
+  & > div {
+    padding: 0;
+  }
 }
 
 @media (max-width: 768px) {

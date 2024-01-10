@@ -49,89 +49,84 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div.row.item {
   margin: 0 4px;
   padding: 8px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   text-align: center;
   font-size: 0.9rem;
-}
 
-div.row.item:last-child {
-  border-bottom: unset;
-}
+  &:last-child {
+    border-bottom: unset;
+  }
 
-button {
-  padding: 0 8px;
-  float: right;
-}
+  i.fa.fa-caret-up {
+    right: 0;
+    position: absolute;
+    padding: 4px 16px 0;
+    transition: all 0.3s;
+  }
 
-button > i.fa {
-  margin: 0;
-}
+  &.collapsed {
+    i.fa.fa-caret-up {
+      rotate: 180deg;
+    }
+  }
 
-div.detail {
-  padding: 16px;
-  border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.03);
-}
+  div.non-padding {
+    padding: 0 16px !important;
+  }
 
-div.detail > div.row {
-  margin: 0 auto 16px;
-}
+  div.detail {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.03);
 
-div.detail > div.row > div:first-child {
-  text-align: left;
-}
+    & > div.row {
+      margin: 0 auto 16px;
 
-div.detail > div.row > div:last-child {
-  text-align: right;
-}
+      div {
+        &:first-child {
+          text-align: left;
+        }
 
-div.detail > div.row:last-child {
-  margin-bottom: 0;
-}
+        &:last-child {
+          text-align: right;
+        }
+      }
 
-div.non-padding {
-  padding: 0 16px !important;
-}
-
-i.fa.when-closed,
-i.fa.when-opened {
-  right: 0;
-  position: absolute;
-  padding: 4px 16px 0;
-}
-
-div.row.collapsed i.when-closed {
-  display: initial;
-}
-
-div.row.collapsed i.when-opened {
-  display: none;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 @media (max-width: 512px) {
-  div.row.item {
-    font-size: 0.8rem;
-  }
+  div {
+    &.row {
+      & > div {
+        padding: 4px;
+      }
 
-  div.row > div {
-    padding: 4px;
-  }
+      &.item {
+        font-size: 0.8rem;
+      }
+    }
 
-  div.detail {
-    padding: 8px 16px;
-  }
+    &.item,
+    &.detail {
+      font-size: 0.7rem;
+    }
 
-  div.detail div.row {
-    margin: 0 auto;
-  }
+    &.detail {
+      padding: 8px 16px;
 
-  div.item,
-  div.detail {
-    font-size: 0.7rem;
+      div.row {
+        margin: 0 auto;
+      }
+    }
   }
 }
 </style>

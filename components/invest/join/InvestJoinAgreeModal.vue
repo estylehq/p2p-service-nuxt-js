@@ -105,6 +105,11 @@ export default {
 </script>
 
 <style scoped>
+div.modal-content {
+  padding: 16px;
+  display: block;
+}
+
 button.close {
   float: right;
 }
@@ -123,11 +128,6 @@ h6 {
 
 form fieldset {
   margin-top: 8px;
-}
-
-div.modal-content {
-  padding: 16px;
-  display: block;
 }
 
 p.warn {

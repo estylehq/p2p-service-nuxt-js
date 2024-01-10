@@ -81,47 +81,49 @@ export default {
 };
 </script>
 
-<style scoped>
-p.desc {
-  text-align: center;
-  color: #727272;
-  font-size: 0.9rem;
-  margin: 16px auto 24px;
-}
+<style lang="scss" scoped>
+div.container {
+  & > p.desc {
+    text-align: center;
+    color: #727272;
+    font-size: 0.9rem;
+    margin: 16px auto 24px;
+  }
 
-div.row {
-  margin-bottom: 32px;
-}
+  div.row {
+    margin-bottom: 32px;
 
-div.row > div {
-  padding: 0;
-}
+    & > div {
+      padding: 0;
 
-div.row > div:first-child {
-  padding-right: 8px;
-}
+      &:first-child {
+        padding-right: 8px;
+      }
 
-div.row > div:last-child {
-  padding-left: 8px;
-}
+      &:last-child {
+        padding-left: 8px;
+      }
 
-div.text-center {
-  margin-bottom: 32px;
-}
+      & > button {
+        width: 100%;
+      }
 
-button {
-  min-width: 256px;
-  min-height: 72px;
-}
+      p {
+        text-align: center;
+        font-weight: bold;
+        opacity: 0.75;
+      }
+    }
+  }
 
-div.row > div > button {
-  width: 100%;
-}
+  div.text-center {
+    margin-bottom: 32px;
+  }
 
-div.row > div > p {
-  text-align: center;
-  font-weight: bold;
-  opacity: 0.75;
+  button {
+    min-width: 256px;
+    min-height: 72px;
+  }
 }
 
 @media (max-width: 768px) {

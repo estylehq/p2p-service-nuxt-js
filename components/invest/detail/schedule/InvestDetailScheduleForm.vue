@@ -32,12 +32,12 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 form {
   margin: 0 8px;
-}
 
-form input {
-  text-align: right;
+  input {
+    text-align: right;
+  }
 }
 </style>

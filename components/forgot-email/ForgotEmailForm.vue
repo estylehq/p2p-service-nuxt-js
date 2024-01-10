@@ -37,7 +37,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 h5 {
   font-weight: bold;
   margin-bottom: 16px;

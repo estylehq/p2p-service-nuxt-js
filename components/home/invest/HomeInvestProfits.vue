@@ -38,71 +38,79 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 div.bg {
   background-color: #f4f8f9;
-}
 
-div.container {
-  padding: 56px 16px;
-  min-height: 386px;
-}
+  div.container {
+    padding: 56px 16px;
+    min-height: 386px;
 
-div.row {
-  margin-bottom: 32px;
-}
+    div {
+      &.divider {
+        width: 75%;
+        margin: 16px auto;
+        border-bottom: 2px solid #1f93ff;
+      }
 
-div.row > div {
-  text-align: center;
-}
+      &.row {
+        margin-bottom: 32px;
 
-img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 16px;
-}
+        & > div {
+          text-align: center;
 
-p {
-  text-align: center;
-  font-size: 0.9rem;
-  line-height: 2;
-}
+          img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 16px;
+          }
 
-p.header {
-  color: rgb(76, 76, 76);
-  font-size: 1.2rem;
-  font-weight: bold;
-}
+          p {
+            text-align: center;
+            font-size: 0.9rem;
+            line-height: 2;
 
-p.desc {
-  margin-bottom: 24px;
-}
+            &.header {
+              color: rgb(76, 76, 76);
+              font-size: 1.2rem;
+              font-weight: bold;
+            }
 
-p.question {
-  color: #62859b;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
+            &.desc {
+              margin-bottom: 24px;
+            }
 
-div.divider {
-  width: 75%;
-  margin: 16px auto;
-  border-bottom: 2px solid #1f93ff;
-}
+            &.question {
+              color: #62859b;
+              font-size: 0.8rem;
+              font-weight: bold;
+            }
+          }
+        }
+      }
 
-div.buttons button {
-  background-color: #1f93ff;
-  color: #ffffff;
-  min-width: 180px;
+      &.buttons {
+        button {
+          background-color: #1f93ff;
+          color: #ffffff;
+          min-width: 180px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 991px) {
-  div.row > div {
-    margin-bottom: 16px;
-  }
+  div {
+    &.row {
+      & > div {
+        margin-bottom: 16px;
+      }
+    }
 
-  div.divider {
-    width: 50%;
+    &.divider {
+      width: 50%;
+    }
   }
 }
 </style>

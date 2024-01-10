@@ -68,7 +68,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 ul.pagination {
   margin-top: 8px;
 }

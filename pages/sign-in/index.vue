@@ -62,7 +62,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 form {
   padding: 16px;
 }

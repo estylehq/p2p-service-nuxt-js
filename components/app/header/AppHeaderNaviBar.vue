@@ -98,7 +98,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 nav {
   background-color: #ffffff;
   z-index: 90;
